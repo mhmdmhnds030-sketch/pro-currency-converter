@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Currency Converter Pro</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div class="converter-container">
+        <!-- زر التبديل الأسطوري -->
+        <button id="theme-toggle" class="theme-btn">🌙 Mode</button>
+
+        <h2>📊 Global Currency Converter</h2>
+        <p class="subtitle">Enter value in any field to convert instantly</p>
+
+        <form id="currency-form">
+            <div class="input-group usd">
+                <label>💵 US Dollar (USD)</label>
+                <input id="usd" type="number" placeholder="0.00">
+            </div>
+
+            <div class="input-group ils">
+                <label>🪙 Israeli Shekel (ILS)</label>
+                <input id="ils" type="number" placeholder="0.00">
+            </div>
+
+            <div class="input-group jod">
+                <label>🇯🇴 Jordanian Dinar (JOD)</label>
+                <input id="jod" type="number" placeholder="0.00">
+            </div>
+
+            <div class="input-group eur">
+                <label>🇪🇺 Euro (EUR)</label>
+                <input id="eur" type="number" placeholder="0.00">
+            </div>
+
+            <div class="input-group gbp">
+                <label>💷 British Pound (GBP)</label>
+                <input id="gbp" type="number" placeholder="0.00">
+            </div>
+
+            <div class="input-group sar">
+                <label>🇸🇦 Saudi Riyal (SAR)</label>
+                <input id="sar" type="number" placeholder="0.00">
+            </div>
+
+            <div class="input-group egp">
+                <label>🇪🇬 Egyptian Pound (EGP)</label>
+                <input id="egp" type="number" placeholder="0.00">
+            </div>
+        </form>
+    </div>
+
+    <script src="./server.js"></script>
+</body>
+
+</html>

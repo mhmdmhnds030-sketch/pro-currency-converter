@@ -1,0 +1,156 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --text-main: #fff;
+    --text-sub: #b3c5cd;
+    --input-bg: rgba(255, 255, 255, 0.08);
+    --input-border: rgba(255, 255, 255, 0.1);
+}
+
+/* ألوان الوضع المضيء */
+[data-theme="light"] {
+    --bg-gradient: linear-gradient(135deg, #e0eafc, #cfdef3);
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --card-border: rgba(0, 0, 0, 0.1);
+    --text-main: #2c3e50;
+    --text-sub: #7f8c8d;
+    --input-bg: #fff;
+    --input-border: #bdc3c7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "lnum";
+}
+
+.converter-container {
+    position: relative;
+    background: var(--card-bg);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--card-border);
+    padding: 30px;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.theme-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    color: var(--text-main);
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    z-index: 10;
+}
+
+
+.theme-btn:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    color: var(--text-main);
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.subtitle {
+    color: var(--text-sub);
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group label {
+    color: var(--text-main);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+form input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 2px solid var(--input-border);
+    background: var(--input-bg);
+    color: var(--text-main);
+    font-size: 16px;
+    outline: none;
+}
+
+/* تأثير التحديد الذكي */
+.usd input:focus {
+    border-color: #2ecc71;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.2);
+}
+
+.ils input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+}
+
+.jod input:focus {
+    border-color: #e67e22;
+    box-shadow: 0 0 10px rgba(230, 126, 34, 0.2);
+}
+
+.eur input:focus {
+    border-color: #f1c40f;
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.2);
+}
+
+.gbp input:focus {
+    border-color: #9b59b6;
+    box-shadow: 0 0 10px rgba(155, 89, 182, 0.2);
+}
+
+.sar input:focus {
+    border-color: #1abc9c;
+    box-shadow: 0 0 10px rgba(26, 188, 156, 0.2);
+}
+
+.egp input:focus {
+    border-color: #e74c3c;
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.2);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
